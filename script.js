@@ -2,12 +2,14 @@ let prevNumber ='';
 let calculatorOpration ='';
 let currentNumber ='0';
 let status = 0;
+let statuss = false;
 
 const calculatorScreen = document.querySelector('.calculator-screen')
 
 const inputNumber = (number)=>{
-    if (currentNumber === prevNumber){
+    if (currentNumber === prevNumber && statuss === false){
         currentNumber='0';
+        statuss = true;
     }
     if (currentNumber === '0'){
         currentNumber = number;
@@ -18,11 +20,10 @@ const inputNumber = (number)=>{
 }
 
 const inputOperator = (operator) => {
-    if (calculationOperator==='') {
-        prevNumber = currentNumber;
-    }
+    prevNumber = currentNumber
     calculatorOpration = operator;
-    currentNumber = '0';
+
+    statuss = false;
 }
 
 const updateScreen = (number) => {
@@ -43,6 +44,7 @@ const operators = document.querySelectorAll(".operator")
 operators.forEach((operator) => {
     operator.addEventListener("click", (event)=> {
         inputOperator(event.target.value);
+        updateScreen(event.target.value);
     })
 })
 
@@ -74,6 +76,8 @@ const calculate = () => {
     currentNumber = result;
     calculationOperator = '';
     prevNumber = currentNumber;
+    statuss = false;
+    
 }
 
 const clearBtn = document.querySelector('.all-clear')
@@ -84,9 +88,10 @@ clearBtn.addEventListener('click', () => {
 })
 
 const clearAll = () => {
-    prevNumber = '';
+    prevNumber = '0';
     calculationOperator = '';
     currentNumber = '0';
+    statuss = false;
 }
 
 const decimal = document.querySelector('.decimal')
@@ -108,9 +113,11 @@ const percentage = document.querySelector(".percentage")
 percentage.addEventListener('click', () => {
     inputPercentage();
     updateScreen(currentNumber);
+    statuss = false;
 })
 
 inputPercentage = () => {
     const hasilPerse = parseInt (currentNumber)/100;
     currentNumber = hasilPerse.toString();
+    prevNumber = currentNumber;
 }

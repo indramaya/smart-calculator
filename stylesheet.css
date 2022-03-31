@@ -1,7 +1,7 @@
 .calculator{
     text-align: center;
     margin: 0 auto;
-    padding-top: 200px;
+    padding-top: 100px;
     width: 400px;
 }
 .calculator-screen{
@@ -41,4 +41,52 @@ button:hover{
 }
 .operator:hover, .equal-sign:hover{
     background-color: darkorange;
+}
+
+/*header*/
+.header {
+    background-color: black;
+    color: wheat;
+    height: 90px;
+    
+}
+.header-logo {
+    float: left;
+    font-size: 36px;
+    padding:20px 200px;
+}
+span {
+    color: #fff;
+}
+
+.btn{
+    font-size: 10px;
+    background-color: blue;
+    height: auto;
+    padding: 5px 5px;
+    width: auto;
+}
+.search {
+    margin-top: 25px;
+    padding-top: 5px;
+    float: right ;
+    padding-right: 25%;
+}
+
+body {
+    margin: 0;
+    font-family: "Lucida Grande";
+    background-color: #fff;
+}
+
+.footer {
+    background-color: #323;
+    color: #fff;
+    height: 50px;
+    padding: 20px;
+    margin-top: 50px;
+  }
+.footer-logo {
+    text-align: center;
+    padding: 25px;
 }
