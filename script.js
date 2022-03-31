@@ -1,15 +1,19 @@
 let prevNumber ='';
 let calculatorOpration ='';
 let currentNumber ='0';
+let status = 0;
 
 const calculatorScreen = document.querySelector('.calculator-screen')
 
 const inputNumber = (number)=>{
+    if (currentNumber === prevNumber){
+        currentNumber='0';
+    }
     if (currentNumber === '0'){
         currentNumber = number;
     } else {
         currentNumber += number;
-    }
+    } 
     
 }
 
@@ -46,7 +50,7 @@ const equalSign = document.querySelector('.equal-sign');
 
 equalSign.addEventListener('click', () => {
     calculate();
-    updateScreen(currentNumber);
+    updateScreen(currentNumber); 
 })
 
 const calculate = () => {
@@ -63,12 +67,13 @@ const calculate = () => {
             break;
         case "/":
             result = prevNumber / currentNumber;
-            break
+            break;
         default:
             break; 
     }
     currentNumber = result;
     calculationOperator = '';
+    prevNumber = currentNumber;
 }
 
 const clearBtn = document.querySelector('.all-clear')
@@ -98,3 +103,14 @@ inputDecimal = (dot) => {
     currentNumber += dot;
 }
 
+const percentage = document.querySelector(".percentage")
+
+percentage.addEventListener('click', () => {
+    inputPercentage();
+    updateScreen(currentNumber);
+})
+
+inputPercentage = () => {
+    const hasilPerse = parseInt (currentNumber)/100;
+    currentNumber = hasilPerse.toString();
+}
