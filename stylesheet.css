@@ -23,7 +23,7 @@
 }
 button{
     height: 80px;
-    background-color: grey;
+    background-color: #725a7a;
     border: 1px solid black;
     font-size: 32px;
     color: #fff;
@@ -35,20 +35,21 @@ button{
     width: 50%;
 }
 .operator, .equal-sign{
-    background-color: orange; 
+    background-color: #355c7d; 
 }
 button:hover{
-    background-color: darkgray;
+    background-color: #c56c86;
 }
 .operator:hover, .equal-sign:hover{
-    background-color: darkorange;
+    background-color: #ff7582;
 }
 
 /*header*/
 .header {
     background-color: black;
     color: wheat;
-    height: 90px;
+    height: 80px;
+
     
 }
 .header-logo {
@@ -66,12 +67,6 @@ span {
     height: auto;
     padding: 5px 5px;
     width: auto;
-}
-.search {
-    margin-top: 25px;
-    padding-top: 5px;
-    float: right ;
-    padding-right: 25%;
 }
 
 body {
