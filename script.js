@@ -51,7 +51,7 @@ const calculate = () => {
     let result = '';
     switch(calculatorOpration) {
         case "+" :
-            result = prevNumber + currentNumber;
+            result = parseInt(prevNumber) + parseInt(currentNumber);
             break;
         case "-": 
             result = prevNumber - currentNumber;
