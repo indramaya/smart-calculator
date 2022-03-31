@@ -20,6 +20,7 @@ const inputNumber = (number)=>{
 }
 
 const inputOperator = (operator) => {
+    if (calculatorOpration !== "") calculate()
     prevNumber = currentNumber
     calculatorOpration = operator;
 

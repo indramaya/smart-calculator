@@ -29,6 +29,7 @@ button{
     color: #fff;
     width: 25%;
     outline: none;
+    cursor: pointer;
 }
 .all-clear, .zero-btn{
     width: 50%;
