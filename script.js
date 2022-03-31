@@ -43,6 +43,29 @@ operators.forEach((operator) => {
 const equalSign = document.querySelector('.equal-sign');
 
 equalSign.addEventListener('click', () => {
-    console.log('equal button is pressed')
+    calculate();
+    updateScreen(currentNumber);
 })
+
+const calculate = () => {
+    let result = '';
+    switch(calculatorOpration) {
+        case "+" :
+            result = prevNumber + currentNumber;
+            break;
+        case "-": 
+            result = prevNumber - currentNumber;
+            break;
+        case "*":
+            result = prevNumber * currentNumber;
+            break;
+        case "/":
+            result = prevNumber / currentNumber;
+            break
+        default:
+            break; 
+    }
+    currentNumber = result;
+    calculationOperator = '';
+}
 
