@@ -40,12 +40,14 @@ button{
     cursor: pointer;
     font-family: 'orbitron', sans-serif;
 }
-.all-clear, .zero-btn{
-    width: 50%;
+.all-clear, .zero-btn, .erase{
     color: #ff6d00;
 }
 .percentage, .operator{
     color: #ff6d00;
+}
+.zero-btn{
+    width: 50%;
 }
 
 button:hover{
