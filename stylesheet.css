@@ -5,11 +5,13 @@
     padding-top: 50px;
     width: 400px;
     font-family: 'Orbitron', sans-serif;
+    background-color: #252525;
+    border-radius: 8px;
 }
 .calculator-screen{
     width: 100%;
     height: 100px;
-    background-color: #252525;
+    background-color: transparent;
     color: #fff;
     text-align: right;
     font-size: 36px;
@@ -26,8 +28,8 @@
 }
 button{
     height: 80px;
-    background-color: #725a7a;
-    border: 1px solid black;
+    background-color: transparent;
+    border:  none;
     font-size: 32px;
     color: #fff;
     width: 25%;
@@ -38,9 +40,7 @@ button{
 .all-clear, .zero-btn{
     width: 50%;
 }
-.operator, .equal-sign{
-    background-color: #355c7d; 
-}
+
 button:hover{
     background-color: #c56c86;
 }
@@ -54,6 +54,7 @@ button:hover{
     color: wheat;
     height: 80px;
     position: relative;
+    margin-bottom: 50px;
 }
 .header-logo {
     float: left;
@@ -75,7 +76,7 @@ span {
 body {
     margin: 0;
     font-family: "Lucida Grande";
-    background-color: #fff;
+    background-color: wheat;
 }
 
 .footer {
