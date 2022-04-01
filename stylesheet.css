@@ -10,6 +10,7 @@ body {
     width: 400px;
     background-color: #fff;
     border-radius: 8px;
+    padding-bottom: 10px;
 }
 .calculator-screen{
     width: 100%;
@@ -53,7 +54,8 @@ button:hover{
     border-radius: 100%;
     width: 15%;
     height: 60px;
-    margin-left: 25px;
+    margin-left: 21px;
+    margin-top: 15px;
 }
 
 /*header*/
