@@ -4,6 +4,10 @@ let currentNumber ='0';
 let status = 0;
 let statuss = false;
 
+const updateScreen = (number) => {
+    calculatorScreen.value = number;
+}
+
 const calculatorScreen = document.querySelector('.calculator-screen')
 
 const inputNumber = (number)=>{
@@ -25,10 +29,6 @@ const inputOperator = (operator) => {
     calculatorOpration = operator;
 
     statuss = false;
-}
-
-const updateScreen = (number) => {
-    calculatorScreen.value = number;
 }
 
 const numbers = document.querySelectorAll(".number");
@@ -57,28 +57,28 @@ equalSign.addEventListener('click', () => {
 })
 
 const calculate = () => {
-    let result = '';
+    let result=0;
+
     switch(calculatorOpration) {
         case "+" :
             result = parseFloat(prevNumber) + parseFloat(currentNumber);
             break;
         case "-": 
-            result = prevNumber - currentNumber;
+            result = parseFloat(prevNumber) - parseFloat(currentNumber);
             break;
         case "*":
-            result = prevNumber * currentNumber;
+            result = parseFloat(prevNumber) * parseFloat(currentNumber);
             break;
         case "/":
-            result = prevNumber / currentNumber;
+            result = parseFloat(prevNumber) / parseFloat(currentNumber);
             break;
         default:
             break; 
     }
     currentNumber = result;
-    calculationOperator = '';
+    calculatorOpration = '';
     prevNumber = currentNumber;
     statuss = false;
-    
 }
 
 const clearBtn = document.querySelector('.all-clear')
