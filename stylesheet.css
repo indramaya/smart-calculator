@@ -42,6 +42,10 @@ button{
 }
 .all-clear, .zero-btn{
     width: 50%;
+    color: #ff6d00;
+}
+.percentage, .operator{
+    color: #ff6d00;
 }
 
 button:hover{
