@@ -40,21 +40,20 @@ button{
     cursor: pointer;
     font-family: 'orbitron', sans-serif;
 }
-.all-clear, .zero-btn, .erase{
+.all-clear, .zero-btn, .erase, .percentage, .operator, .scintific{
     color: #ff6d00;
-}
-.percentage, .operator{
-    color: #ff6d00;
-}
-.zero-btn{
-    width: 50%;
 }
 
 button:hover{
     background-color: #c56c86;
 }
-.operator:hover, .equal-sign:hover{
-    background-color: #ff7582;
+.equal-sign{
+    background-color: #ff6d00;
+    color: #fff;
+    border-radius: 100%;
+    width: 15%;
+    height: 60px;
+    margin-left: 25px;
 }
 
 /*header*/
